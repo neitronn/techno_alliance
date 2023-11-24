@@ -1,0 +1,127 @@
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #6ebeff;
+    border-bottom-color: #337AB7;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.search{
+    min-width: 320px;
+    max-width: 1000px;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.search-input{
+    padding: 0 16px;
+    height: 42px;
+    font-size: 24px;
+    line-height: 40px;
+    background: #fafafa;
+    background: var(--bg_black);
+    border: 1px solid #ececec;
+    color: var(--main-color__text);
+    width: 100%;
+}
+
+.search_results{
+    opacity: 0;
+    height: 0;
+    transition: all 0.7s;
+    background: var(--bg_black);
+    margin: 20px 0;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.search_results .title{
+    font-size: 22px;
+    line-height: 22px;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ececec;
+    width: 100%;
+}
+
+.search_results.ready{
+    opacity: 1;
+    height: auto;
+}
+
+.quick_search__results, .full_search__results{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 20px -10px;
+}
+
+.product{
+    margin: 0 10px 15px 10px;
+    max-width: 120px;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.product img{
+    height: 88px;
+    margin-bottom: 10px;
+}
+
+.product-description{
+    padding: 5px;
+}
+
+.product-name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    box-orient: vertical;
+    height: 48px;
+}
+
+.product-price{
+    font-weight: 600;
+}
+
+ul.pagination{
+    margin: 15px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination li{
+    min-width: 20px;
+    height: 20px;
+    background-color: #aaa;
+    margin: 0 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination li[data-page]{
+    cursor: pointer;
+}
+
+li.active-page{
+    background-color: #888;
+}
